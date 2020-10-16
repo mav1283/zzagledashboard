@@ -84,7 +84,9 @@
     position: relative;
     .rewards-slider {
       @include grid-container(1em);
-
+      h3 {
+        text-align: center;
+      }
       .slide-container {
         position: relative;
         overflow: hidden;
