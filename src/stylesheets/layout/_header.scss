@@ -1,0 +1,48 @@
+.app-header {
+  @include grid-container(1em);
+  @include uniform-sides-padded-container(1em);
+  align-items: center;
+  background-color: darken($co_red, 10%);
+  font-size: 1.5rem;
+  color: white;
+  .nav-menu {
+    &--btn {
+      cursor: pointer;
+      &:hover {
+        color: var(--trans-light-6);
+      }
+    }
+  }
+  .notification {
+    @extend .flex;
+    justify-content: flex-end;
+    &--bell {
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      &:hover {
+        color: var(--trans-light-6);
+      }
+      &--amt {
+        position: absolute;
+        @extend .flex-centered;
+        font-size: 0.65rem;
+        color: var(--trans-dark-9);
+        width: 1em;
+        height: 1em;
+        @include uniform-sides-padded-container(0.25em);
+        @include border-radius(50%);
+        background-color: var(--co_beige);
+        top: -2px;
+        left: -4px;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .app-header {
+    grid-template-columns: auto 1fr;
+  }
+}

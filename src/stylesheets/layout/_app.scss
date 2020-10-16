@@ -1,0 +1,5 @@
+.App {
+  @include grid-container(0);
+  width: inherit;
+  height: inherit;
+}
